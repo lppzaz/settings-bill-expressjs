@@ -249,6 +249,8 @@ Setup a simple ExpressJS server with a few routes that allow users to:
 * Configure sms and call costs.
 * Configure a warning and critical level.
 
+Use this HTML [template](./public/index.html).
+
 If the total cost exceed the warning level show the total cost in orange, if it exceeds the critical level show it in red and prevent any new costs from being added.
 
 > **Note:** use the `res.redirect('/target-route')` route to redirect to a GET route.
