@@ -249,7 +249,7 @@ Setup a simple ExpressJS server with a few routes that allow users to:
 * Configure sms and call costs.
 * Configure a warning and critical level.
 
-Use this HTML [template](./public/index.html).
+Use this HTML as a [template](./public/index.html) for your screens.
 
 Create a folder called `settings-bill-expressjs`. Create a GitHub repo with the same name for the project.
 
