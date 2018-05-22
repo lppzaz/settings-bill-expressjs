@@ -264,8 +264,8 @@ Route name | Action |Description
 `/`        | GET   | show the home screen - show the prices set and a from to enter action call/sms.
 `settings` | POST  | set the settings - sms & call price and the warning & critical level
 `/action`  | POST  | record an action of `sms` or `call` and the appropriate price based on the settings entered & a timestamp when record has been entered.
-`/actions`  | GET  | show all the actions - display the timestamps using https://momentjs.com/docs/#/displaying/fromnow/ and display a total cost for all the actions on the screen.
-`/actions/:type`  | GET  | display all the `sms` or `call` actions - display the timestamps using https://momentjs.com/docs/#/displaying/fromnow/ and display a total cost for the selected action.
+`/actions`  | GET  | show all the actions - display the timestamps using [fromNow](https://momentjs.com/docs/#/displaying/fromnow/) and display a total cost for all the actions on the screen.
+`/actions/:type`  | GET  | display all the `sms` or `call` actions - display the timestamps using [fromNow](https://momentjs.com/docs/#/displaying/fromnow/) and display a total cost for the selected action.
 
 ### Deploy the Heroku
 
