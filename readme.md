@@ -251,6 +251,8 @@ Setup a simple ExpressJS server with a few routes that allow users to:
 
 Use this HTML [template](./public/index.html).
 
+Create a folder called `settings-bill-expressjs`. Create a GitHub repo with the same name for the project.
+
 If the total cost exceed the warning level show the total cost in orange, if it exceeds the critical level show it in red and prevent any new costs from being added.
 
 > **Note:** use the `res.redirect('/target-route')` route to redirect to a GET route.
@@ -264,3 +266,7 @@ Route name | Action |Description
 `/action`  | POST  | record an action of `sms` or `call` and the appropriate price based on the settings entered & a timestamp when record has been entered.
 `/actions`  | GET  | show all the actions - display the timestamps using https://momentjs.com/docs/#/displaying/fromnow/ and display a total cost for all the actions on the screen.
 `/actions/:type`  | GET  | display all the `sms` or `call` actions - display the timestamps using https://momentjs.com/docs/#/displaying/fromnow/ and display a total cost for the selected action.
+
+### Deploy the Heroku
+
+Deploy your application to [Heroku](https://www.heroku.com/nodejs).
