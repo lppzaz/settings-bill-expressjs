@@ -2,6 +2,10 @@
 
 In this document we will explore how to create web applications with ExpressJS.
 
+Web Applications are programs that clients can connect to remotely access using a Web Browser. They are started up on a port number, which forms part of the URL to the server.
+
+Let's start of by creating a simple Web Server using JavaScript.
+
 Create a project folder and change into it:
 
 ```
@@ -44,7 +48,7 @@ Open this link in a web browser: `http://localhost:3007`
 
 You should see `Bill Settings WebApp` in the server.
 
-If you were to stopping the server instance by pressing `Ctrl-C` in the terminal the `http://localhost:3007` URL will not work any more.
+If you were to stop the server instance by pressing `Ctrl-C` in the terminal the `http://localhost:3007` URL will not work any more.
 
 ## Install nodemon
 
@@ -106,6 +110,36 @@ Create a `home.handlebars` template to get the code above to work.
 ## POST and GET routes
 
 One can create POST and GET post routes in ExpressJS amongst others.
+
+A route in ExpressJS have two parts:
+
+* The route name - the name of the route that can be called from the browser.
+* The routes handler - the function that is called when the route is called in the browser.
+
+Each route takes at least two parameters:
+
+* The HttpRequest object called `req` by convention,
+* and the HttpResponse object called `res`.
+
+The HttpRequest object is for handling inbound server data and the HttpResponse object for handling outbound server data.
+
+### Inbound Data
+
+Data can be sent into the ExpressJS server using the URL or using HTML forms.
+
+When using the URL data can be send in using a parameter, `/my-root/:the_param` or a query string like this `/my-root/the_url?param=30&username=avee`
+
+Parameters are read out of the `HttpRequest` object like this: `req.params.the_param` and query parameters are read like this: `req.params.username` and `req.params.the_url`.
+
+Form data can be read from `req.body` once middleware has been configured to extract the form data from the Http POST requests.
+
+### Outbound data
+
+Data can be send out of the server using:
+
+* `res.send` - send text to the client can be HTML.
+* `res.json` - send JSON data to the client. Used for API's.
+* `res.render` - this needs a view engine configured for this to work.
 
 ### GET
 
