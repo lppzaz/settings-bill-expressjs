@@ -8,7 +8,7 @@ module.exports = function () {
   var smses = 0;
   var total = 0;
   var recording = [];
-
+// what the budgy?
   function billType(billItemType){
   if (billItemType === 'call') {
       calls += callCost;
