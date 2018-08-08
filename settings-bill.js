@@ -92,6 +92,20 @@ function getRecords(item){
   return recording;
 
 }
+function call(){
+  return callCost;
+}
+function sms(){
+  return smsCost;
+}
+function warn(){
+  return warning;
+}
+function crit(){
+  return critical;
+}
+
+
   return {
     //function aliases (remember to write () to call funtions)
     billItem:     billType,
@@ -105,6 +119,10 @@ function getRecords(item){
     warning:      warningLevel,
     overCritical: isCritical,
     records:      getRecords,
+    getCall:      call,
+    getSms:       sms,
+    getWarn:      warn,
+    getCrit:      crit
   }
 
 }

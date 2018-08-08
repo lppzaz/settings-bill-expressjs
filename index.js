@@ -1,7 +1,7 @@
 "use strict";
 const express = require('express');
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 const SettingsBill = require('./settings-bill');
 const moment = require('moment');
 const app = express();
@@ -21,7 +21,7 @@ app.engine('handlebars', exphbs({
 app.set('view engine', 'handlebars');
 app.use(bodyParser.urlencoded({
   extended: false
-}))
+}));
 app.use(bodyParser.json());
 
 
@@ -32,7 +32,13 @@ app.get('/', function(req, res) {
     allTotal: settingsBill.totalBill(),
     colorclass: settingsBill.colour(),
   }
-  res.render('home', totals);
+  let amounts = {
+    callCost: settingsBill.getCall(),
+    smsCost: settingsBill.getSms(),
+    warningLevel: settingsBill.getWarn(),
+    criticalLevel: settingsBill.getCrit()
+  }
+  res.render('home', {totals,amounts});
 });
 
 //CALCULATE
@@ -49,30 +55,38 @@ res.redirect('/')
 //SETTINGS
 
 app.post('/settings', function(req, res) {
+
   // collect data from the form
-  let call = req.body.callCost
-  let sms = req.body.smsCost
-  let warn = req.body.warningLevel
-  let crit = req.body.criticalLevel
-  //set data
+  let call = req.body.callCost;
+  let sms = req.body.smsCost;
+  let warn = req.body.warningLevel;
+  let crit = req.body.criticalLevel;
+  
+
+
+  // set data
   settingsBill.callCost(call);
   settingsBill.smsCost(sms);
   settingsBill.warning(warn);
   settingsBill.critical(crit);
-  res.redirect("/")
+ 
+  //saving user values on screen
+
+
+  res.redirect("/");
 });
 
 // create route for records of actions
 app.get ('/actions', function(req, res){
 var Records = settingsBill.records();
-  res.render('actions',{records:Records})
-})
+  res.render('actions',{records:Records});
+});
 app.get ('/actions/:item', function(req, res){
 var itemz = req.params.item
 var Records = settingsBill.records(itemz);
-  res.render('actions',{records:Records})
-})
+  res.render('actions',{records:Records});
+});
 
 app.listen(PORT, function() {
-  console.log('App starting on port', PORT);
+  console.log('INITIATING LAUNCH SEQUENCE IN 3,2,1 ON LOCAL PORT', PORT);
 });
