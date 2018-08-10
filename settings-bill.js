@@ -104,8 +104,17 @@ function warn(){
 function crit(){
   return critical;
 }
-
-
+function reset(){
+   //settings
+  callCost = 0;
+   smsCost = 0;
+   warning = 0;
+   critical = 0;
+   //totals
+   calls = 0;
+   smses = 0;
+   total = 0;
+}
   return {
     //function aliases (remember to write () to call funtions)
     billItem:     billType,
@@ -122,7 +131,8 @@ function crit(){
     getCall:      call,
     getSms:       sms,
     getWarn:      warn,
-    getCrit:      crit
+    getCrit:      crit,
+    resetClear:   reset
   }
 
 }

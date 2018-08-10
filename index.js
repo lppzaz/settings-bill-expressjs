@@ -75,6 +75,14 @@ app.post('/settings', function(req, res) {
 
   res.redirect("/");
 });
+// create route to reset fields
+
+app.get('/reset', function(req, res){
+
+  settingsBill.resetClear();
+
+  res.redirect('/');
+});
 
 // create route for records of actions
 app.get ('/actions', function(req, res){

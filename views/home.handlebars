@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/skeleton.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+
     <div class="container">
       <div class="row">
 
@@ -72,13 +64,10 @@
               <label for="">Critical level</label>
               <input name="criticalLevel"class="u-full-width criticalLevelSetting" type="text" placeholder="eg. 65.00" value="{{amounts.criticalLevel}}" >
               <button class="button-primary updateSettings" type="submit" name="button">Update settings</button>
-              <button class="button-primary" type="reset" name="button">Reset</button>
-              </form>
-            </div>
+                           
+              <button class="button-primary" type="reset" onclick="resetValues()" name="reset_button" >Reset</button>
+            </form> </div>
           </div>
         </div>
       </div>
     </div>
-
-  </body>
-</html>
