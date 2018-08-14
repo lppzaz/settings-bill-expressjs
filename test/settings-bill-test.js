@@ -88,12 +88,5 @@ describe('Checks settings bill for call', function() {
 
 
               });
-		it('checks that settings are returned to zero with reset button', function() {
 
-              
-                assert.equal(newInstance.resetClear(),);
-
-
-
-              });
       });
