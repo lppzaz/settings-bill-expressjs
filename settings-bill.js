@@ -10,8 +10,8 @@ module.exports = function () {
     let recording = [];
 
     function billType (billItemType) {
-        if (isCritical()) {
-            return;
+        // if (isCritical()) {
+        //     return;
         }
 
         if (billItemType === 'call') {
