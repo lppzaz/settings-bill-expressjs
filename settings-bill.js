@@ -12,7 +12,7 @@ module.exports = function () {
     function billType (billItemType) {
         // if (isCritical()) {
         //     return;
-        }
+        // }
 
         if (billItemType === 'call') {
             calls += callCost;
