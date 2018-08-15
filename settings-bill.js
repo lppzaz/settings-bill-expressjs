@@ -10,9 +10,9 @@ module.exports = function () {
     let recording = [];
 
     function billType (billItemType) {
-        // if (isCritical()) {
-        //     return;
-        // }
+        if (isCritical()) {
+            return;
+        }
 
         if (billItemType === 'call') {
             calls += callCost;
@@ -103,10 +103,10 @@ module.exports = function () {
     }
     function reset () {
         // settings
-        callCost = 0;
-        smsCost = 0;
-        warning = 0;
-        critical = 0;
+        callCost = "please enter value";
+        smsCost = "please enter value";
+        warning = "please enter value";
+        critical = "please enter value";
         // totals
         calls = 0;
         smses = 0;
