@@ -1,0 +1,11 @@
+.table {
+    background-color: blanchedalmond;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 50px;
+    justify-content: center;
+    border: none;
+    max-width: 50%;
+    box-shadow: 4px 4px 5px #000;
+    color: rgb(151, 151, 173);
+    text-shadow: 1px 1px 2px black, 0 0 5px darkblue;
+}

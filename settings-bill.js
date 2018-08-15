@@ -103,10 +103,10 @@ module.exports = function () {
     }
     function reset () {
         // settings
-        callCost = "please enter value";
-        smsCost = "please enter value";
-        warning = "please enter value";
-        critical = "please enter value";
+        callCost = 'please enter value';
+        smsCost = 'please enter value';
+        warning = 'please enter value';
+        critical = 'please enter value';
         // totals
         calls = 0;
         smses = 0;
