@@ -2,8 +2,8 @@ module.exports = function () {
     // create a variable that will keep track of the total bill
     let callCost = 0;
     let smsCost = 0;
-    let warning = 0;
-    let critical = 0;
+    let warning = 30;
+    let critical = 60;
     let calls = 0;
     let smses = 0;
     let total = 0;
@@ -103,10 +103,10 @@ module.exports = function () {
     }
     function reset () {
         // settings
-        callCost = 'please enter value';
-        smsCost = 'please enter value';
-        warning = 'please enter value';
-        critical = 'please enter value';
+        callCost = 0;
+        smsCost = 0;
+        warning = 30;
+        critical = 60;
         // totals
         calls = 0;
         smses = 0;
